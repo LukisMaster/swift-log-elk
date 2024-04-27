@@ -6,15 +6,15 @@ import PackageDescription
 let package = Package(
     name: "swift-log-elk",
     platforms: [
-        .macOS(.v10_15),
-        .iOS(.v13)
+        .macOS(.v13),
+        .iOS(.v15)
     ],
     products: [
         .library(name: "LoggingELK", targets: ["LoggingELK"])
     ],
     dependencies: [
-        .package(url: "https://github.com/apple/swift-log.git", .upToNextMinor(from: "1.4.0")),
-        .package(url: "https://github.com/swift-server/async-http-client.git", .upToNextMinor(from: "1.5.0"))
+        .package(url: "https://github.com/apple/swift-log.git", .upToNextMajor(from: "1.4.0")),
+        .package(url: "https://github.com/swift-server/async-http-client.git", .upToNextMajor(from: "1.5.0"))
     ],
     targets: [
         .target(
